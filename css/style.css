@@ -1,0 +1,253 @@
+body {
+    background-image: url("../img/bg.jpg");
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
+    background-position: right bottom;
+    scroll-snap-type: y mandatory;
+    scroll-padding: 10px;
+}
+
+.top,.name,.name2,.hako,.aitai {
+    scroll-snap-align: start;
+}
+
+
+/* ------TOPここから------------------------ */
+.top {
+    background-color: black;
+
+    
+}
+
+.douga li {
+    font-weight: initial;
+    font-size: 200px;
+    color:white;
+    font-family: 'Gungsuh';
+
+}
+
+
+.douga {
+    height:100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    position: relative;
+
+
+}
+
+.usumehaikei ul {
+    height:100vh;
+    background: rgba(0, 0, 0,0.3);
+}
+
+.usumehaikei li {
+        /* ここから動き */
+        position:  relative; 
+        animation: anime1 2.5s ease;
+}
+
+@keyframes anime1 {
+    0% {
+        opacity:  0;                /* 透明度指定 */
+        left: 100px;                  /* 位置指定 */
+    }
+    100% {
+        opacity:  1;                /* 透明度指定 */
+        left: 0;                     /* 位置指定 */
+    }
+}
+
+
+
+.douga video {
+/* position: fixed; */
+width:100vh;
+min-width: 100%;
+min-height: 100%;
+object-fit:contain;
+/* この動画の時のトリミング具合↓ */
+/* top:-500px; */
+z-index: 2;
+}
+
+.top ul {
+    position: absolute;
+    z-index: 3;
+}
+
+/* ------TOPここまで------------------------ */
+
+
+
+
+/* ------nameここから------------------------ */
+
+body:nth-child(1) {  
+    filter: blur(10px);
+}
+
+.name {
+    height:100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.shasin img {
+    height: 500px;
+    width:500px;
+    /* 縦横比固定↓ */
+    object-fit: cover;
+    object-position: 50% 40%;
+    /* 繰り返しをなくす↓ */
+    background-repeat: no-repeat;
+    /* 画像を大きくする */
+    /* background-attachment: fixed; */
+    background-position:center;
+    border:#504137 solid 4px;
+}
+
+.shasin iframe {
+    /* 縦横比固定↓ */
+    object-fit: cover;
+    object-position: 50% 40%;
+    /* 繰り返しをなくす↓ */
+    /* 画像を大きくする */
+    background-position:center;
+    border:#504137 solid 4px;
+
+}
+
+.name p {
+    color: #504137;
+    font-size: 50px;
+}
+
+
+
+/* ------nameここまで------------------------ */
+
+
+/* ------hakoここから------------------------ */
+.hako {
+    height:100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hako p {
+    position: absolute;
+    z-index: 4;
+    color:white;
+}
+
+.maru {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;  
+    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+    animation: sk-scaleout 1.0s infinite ease-in-out;
+    position: absolute;
+    z-index: 2;
+  }
+  
+  @-webkit-keyframes sk-scaleout {
+    0% { 
+        -webkit-transform: scale(0)
+     }
+    100% {
+      -webkit-transform: scale(1.0);
+      opacity: 0;
+    }
+  }
+
+  .hako img {
+    height: 550px;
+    width:550px;
+    /* 縦横比固定↓ */
+    object-fit: cover;
+    object-position: 35% 35%;
+    /* 繰り返しをなくす↓ */
+    background-repeat: no-repeat;
+    /* 画像を大きくする */
+    /* background-attachment: fixed; */
+    background-position:center;
+    position: relative;
+    z-index: 1;
+  }
+
+/* ------hakoここまで------------------------ */
+
+/* ------aitaiここから------------------------ */
+
+.aitai {
+    height:100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+
+}
+
+.botan {
+    display: flex;
+    flex-direction: row;
+}
+
+.botan button {
+    margin:0 30px;
+}
+
+button {
+    border:none;
+    font-size: 60px;
+}
+
+.aitai P {
+    color:rgb(105, 58, 58);
+    font-size: 30px;
+}
+
+.botan button:hover {
+    background-color: aqua;
+}
+
+.botan button:last-child {
+    margin-right:0;
+    background-color: white;
+    border:none;
+    font-size:3px;
+
+    
+}
+
+.botan button:last-child:hover {
+    background-color:red;
+}
+
+
+.aitai_botan button {
+    /* background-color: #f00; */
+
+    /* 1秒かけて背景色をアニメーションさせる */
+    transition: background-color 1s;
+}
+
+
+
+/* ------aitaiここまで ------------------------ */
+

@@ -7,6 +7,59 @@ body {
     scroll-padding: 10px;
 }
 
+header {
+    height:50px;
+    background-color:rgb(82, 62, 78);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header ul {
+    display: flex;
+    margin-left:20px;
+    color:white;
+    align-items: center;
+
+
+}
+
+.icon img {
+    height:30px;
+    margin-left:30px;
+}
+
+
+
+
+
+.btn {
+    display: inline-block;
+    padding: .2em 2.5em;
+    border: 2px solid rgb(153, 140, 151);
+    border-radius: .4em 2em .5em 3em/3em .5em 2em .5em;
+    font-family: 'Covered By Your Grace', cursive;
+    font-weight:bold;
+    text-align: center;
+    margin:0 20px;
+    text-decoration: none;
+    color:white;
+
+}
+
+.btn li {
+    padding:3px;
+}
+
+.btn:hover {
+    background-color: rgb(90, 80, 99);
+}
+
+
+
 .top,.name,.name2,.hako,.aitai {
     scroll-snap-align: start;
 }
@@ -70,6 +123,7 @@ width:100vh;
 min-width: 100%;
 min-height: 100%;
 object-fit:contain;
+/* 要素の縦横比を保ったまま、ボックスに要素全体が収まるサイズに調整されて表示されます。要素の幅と高さのうち、長いほうだけがボックスにフィットします。 */
 /* この動画の時のトリミング具合↓ */
 /* top:-500px; */
 z-index: 2;
@@ -103,6 +157,7 @@ body:nth-child(1) {
 .shasin img {
     height: 500px;
     width:500px;
+    margin-top:20px;
     /* 縦横比固定↓ */
     object-fit: cover;
     object-position: 50% 40%;
@@ -138,6 +193,7 @@ body:nth-child(1) {
 /* ------hakoここから------------------------ */
 .hako {
     height:100vh;
+    margin-top:10px;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -158,6 +214,8 @@ body:nth-child(1) {
     background-color: rgb(255, 255, 255);
     border-radius: 100%;  
     -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+    /* infinite  アニメーションの繰り返し回数を指定する */
+    /* ease-in-out ゆっくり始まってゆっくり終わる */
     animation: sk-scaleout 1.0s infinite ease-in-out;
     position: absolute;
     z-index: 2;
@@ -174,8 +232,8 @@ body:nth-child(1) {
   }
 
   .hako img {
-    height: 550px;
-    width:550px;
+    height: 530px;
+    width:530px;
     /* 縦横比固定↓ */
     object-fit: cover;
     object-position: 35% 35%;
@@ -187,6 +245,8 @@ body:nth-child(1) {
     position: relative;
     z-index: 1;
   }
+
+
 
 /* ------hakoここまで------------------------ */
 
@@ -215,6 +275,11 @@ body:nth-child(1) {
 button {
     border:none;
     font-size: 60px;
+}
+
+button a {
+    text-decoration: none;
+
 }
 
 .aitai P {
@@ -251,3 +316,151 @@ button {
 
 /* ------aitaiここまで ------------------------ */
 
+
+/* ------1000pxここから ------------------------ */
+
+@media screen and (max-width:1000px) {
+
+    /* とｐ */
+
+    body {
+        background-image: url("../img/bg.jpg");
+        /* background-repeat: no-repeat; */
+        background-attachment: fixed;
+        background-position: right bottom;
+        scroll-snap-type: y mandatory;
+        scroll-padding: 10px;
+    }
+    
+    .douga li {
+        font-weight: initial;
+        font-size: 40px;
+        color:white;
+        font-family: 'Gungsuh';
+    
+    }
+    
+    
+    .douga {
+        height:100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+        position: relative;
+    
+    
+    }
+    
+    .usumehaikei ul {
+        display: flex;
+    }
+
+    .usumehaikei ul {
+        width:100%;
+        height:100vh;
+        background: rgba(0, 0, 0,0.3);
+    }
+    .douga video {
+        /* position: fixed; */
+        width:100vh;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit:contain;
+        /* この動画の時のトリミング具合↓ */
+        /* top:-500px; */
+        z-index: 2;
+    }
+     /* とｐ */   
+        
+    /* name */
+    .name p {
+        color: #504137;
+        font-size: 25px;
+    }
+    .shasin img {
+        height: 250px;
+        width:250px;
+        margin-top:20px;
+        /* 縦横比固定↓ */
+        object-fit: cover;
+        object-position: 50% 40%;
+        /* 繰り返しをなくす↓ */
+        background-repeat: no-repeat;
+        /* 画像を大きくする */
+        /* background-attachment: fixed; */
+        background-position:center;
+        border:#504137 solid 4px;
+    }
+    .shasin iframe {
+        /* 縦横比固定↓ */
+        height: 250px;
+        width:250px;
+        object-fit: cover;
+        object-position: 50% 40%;
+        /* 繰り返しをなくす↓ */
+        /* 画像を大きくする */
+        background-position:center;
+        border:#504137 solid 4px;
+    
+    }
+    /* name */
+    /* hako */
+    .hako {
+        display: none; 
+    }
+
+
+
+
+    /* hako */
+
+}
+/* ------1000pxここまで------------------------ */
+
+/* ------500pxここから------------------------ */
+@media screen and (max-width: 550px) {
+    .icon {
+        display: none;
+    }
+
+    .usumehaikei ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .shasin img {
+        height: 150px;
+        width:150px;
+        margin-top:20px;
+        /* 縦横比固定↓ */
+        object-fit: cover;
+        object-position: 50% 40%;
+        /* 繰り返しをなくす↓ */
+        background-repeat: no-repeat;
+        /* 画像を大きくする */
+        /* background-attachment: fixed; */
+        background-position:center;
+        border:#504137 solid 4px;
+    }
+    .shasin iframe {
+        /* 縦横比固定↓ */
+        height: 150px;
+        width:150px;
+        object-fit: cover;
+        object-position: 50% 40%;
+        /* 繰り返しをなくす↓ */
+        /* 画像を大きくする */
+        background-position:center;
+        border:#504137 solid 4px;
+    
+    }
+    .name p {
+        color: #504137;
+        font-size: 20px;
+    }
+}
+
+
+/* ------500pxここまで------------------------ */

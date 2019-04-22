@@ -1,0 +1,224 @@
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template: 
+    "header header header" 50px
+    "main main aside" 1000px
+    /3fr 1fr 2fr;
+    z-index: 300;
+}
+
+header {
+    background-color:#523e4e;
+    grid-area: header;
+}
+
+main {
+    background: rgba(252, 230, 230, 0.8);   
+    grid-area: main; 
+}
+
+aside {
+    background-color:#b69b8f;
+    grid-area: aside;
+    display: grid;
+    grid-template: 
+    "midasi1" 15%
+    "midasi2" 15%
+    "midasi3" 15%
+    "midasi4" 15%
+    /90%;    
+    justify-content: center;
+    padding:10px 0;
+}
+
+aside p {
+    margin-left: 50px;
+}
+
+.midasi1 {
+    grid-area: midasi1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    padding: 0.5em 1em 0.5em 1em;
+    border:solid #c1cbb6 ;
+    border-width:1px 0px 0px 0px;
+    color:rgb(68, 68, 68);
+    font-weight: bold;
+    display: flex;
+    align-content: space-around;
+    justify-content: space-between;
+
+}
+
+a:last-child {
+    
+    /* padding: 0.5em 1em 0.5em 1em; */
+    border:solid #c1cbb6 ;
+    border-width:1px 0px 1px 0px;
+}
+
+a:hover {
+    background-color:rgb(201, 196, 199)
+}
+
+p img {
+    height:90px;
+    width:90px;
+}
+
+.midasi2 {
+    grid-area: midasi2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+.midasi3 {
+    grid-area: midasi3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.midasi4 {
+    grid-area: midasi4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+
+
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+main pre {
+    font-size:30px;
+    text-align: left;
+    margin:30px;
+}
+
+main img {
+    height: 500px;
+    width:500px;
+    object-fit: cover;
+    margin:30px;
+
+
+}
+
+@media screen and (max-width:1000px) {
+    aside {
+        background-color:#b69b8f;
+        grid-area: aside;
+        display: grid;
+        grid-template: 
+        "midasi1" 10%
+        "midasi2" 10%
+        "midasi3" 10%
+        "midasi4" 10%
+        /90%;    
+        justify-content: center;
+        padding:10px 0;
+    }    
+    p img {
+        height:50px;
+        width:50px;
+    }
+    
+}
+@media screen and (max-width:800px) {
+    aside {
+        background-color:#b69b8f;
+        grid-area: aside;
+        display: grid;
+        grid-template: 
+        "midasi1" auto
+        "midasi2" auto
+        "midasi3" auto
+        "midasi4" auto
+        /90%;    
+        justify-content: center;
+        padding:10px 0;
+    }    
+    p img {
+        height:50px;
+        width:50px;
+    }
+
+    
+    
+}
+@media screen and (max-width:700px) {
+
+    .container {
+        display: grid;
+        grid-gap: 5px;
+        grid-template: 
+        "header" 50px
+        "aside" auto
+        "main " 1000px
+        /100%;
+        z-index: 300;
+    }    
+
+
+    main pre {
+        font-size:20px;
+        text-align: left;
+        margin:30px;
+    }
+
+    main img {
+        height: 250px;
+        width:250px;
+        object-fit: cover;
+        margin:30px;
+
+
+    }
+
+    a {
+        height: auto;
+        text-decoration: none;
+        padding: 30px 0;
+        border:solid #c1cbb6 ;
+        border-width:1px 0px 0px 0px;
+        color:rgb(68, 68, 68);
+        font-weight: bold;
+        display: flex;
+        align-content: space-around;
+    
+    }    
+    .midasi1 {
+        grid-area: midasi1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    aside img {
+        margin-left:150px;
+    }
+    
+}
